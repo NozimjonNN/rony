@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import Image from 'next/image';
+import ava from '../img/1.png'
 
 export default function Nav() {
   const [isOpen, setIsOpen] = useState(false);
@@ -42,12 +44,24 @@ export default function Nav() {
             isOpen ? 'translate-x-0' : 'translate-x-full'
           }`}
         >
-          <ul className="space-y-8 text-xl">
-            <li><a href="/" className="text-gray-900 dark:text-white">Home</a></li>
-            <li><a href="/about" className="text-gray-900 dark:text-white">About</a></li>
-            <li><a href="/services" className="text-gray-900 dark:text-white">Services</a></li>
-            <li><a href="/contact" className="text-gray-900 dark:text-white">Contact</a></li>
-          </ul>
+          <div className="w-[100%] h-[100%] flex justify-center items-center">
+            <div className='w-[50%] flex flex-col gap-[30px] p-[100px] text-white'>
+              <Image src={ava} className="w-[200px]"/>
+              <h1 className='text-[45px] font-bold'>Hi, I am Rony! I am a desiginer based on Bangladesh. </h1>
+              <p className='text-[20px] text-[#A9A9A9] opacity-[0.7]'>Age - 23</p>
+              <p className='text-[20px] text-[#A9A9A9] opacity-[0.7]'>Country - Bangladesh</p>
+              <p className='text-[20px] text-[#A9A9A9] opacity-[0.7]'>Whatsapp - +8801756238075</p>
+              <p className='text-[20px] text-[#A9A9A9] opacity-[0.7]'>Email - hirony16@gmail.com</p>
+            </div>
+            <div className='w-[50%] flex justify-center items-center'>
+              <ul className='list-none flex flex-col gap-[40px]'>
+                <li><a href="/" className='text-[60px] font-medium opacity-[0.7] hover:opacity-[1] duration-[0.5s]'>Home</a></li>
+                <li><a href="/" className='text-[60px] font-medium opacity-[0.7] hover:opacity-[1] duration-[0.5s]'>Protfolio</a></li>
+                <li><a href="/" className='text-[60px] font-medium opacity-[0.7] hover:opacity-[1] duration-[0.5s]'>Process</a></li>
+                <li><a href="/" className='text-[60px] font-medium opacity-[0.7] hover:opacity-[1] duration-[0.5s]'>Contact</a></li>
+              </ul>
+            </div>
+          </div>
         </div>
       </nav>
     </>
